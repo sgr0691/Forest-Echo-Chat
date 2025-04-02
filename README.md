@@ -37,7 +37,7 @@ The mobile interface maintains the serene Ghibli-inspired aesthetic with:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/sergirovira/forest-echo-chat.git
+git clone https://github.com/sgr0691/forest-echo-chat.git
 ```
 
 2. Install dependencies:
