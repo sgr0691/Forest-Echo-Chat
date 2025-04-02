@@ -14,6 +14,7 @@ import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
 import { AlertCircle, Check, Info, Key, Trash2 } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { List, Code, Search, Globe, FileText } from "lucide-react"
 
 // This would be the interface between our React UI and Swift backend
 interface SwiftBridge {
@@ -594,9 +595,19 @@ export function SettingsPanel() {
             {tools.map((tool) => (
               <div key={tool.id} className="flex items-center justify-between p-3 border rounded-md">
                 <div className="flex items-center gap-2">
-                  <div className="p-1 bg-primary/10 rounded">
-                    {/* This would map to a Swift SF Symbol */}
-                    <span className="text-xs font-mono">{tool.iconName}</span>
+                  <div className="p-1 bg-primary/10 rounded flex items-center justify-center w-8 h-8">
+                    {tool.iconName === "list.bullet" && <List className="h-4 w-4" />}
+                    {tool.iconName === "chevron.left.forwardslash.chevron.right" && <Code className="h-4 w-4" />}
+                    {tool.iconName === "magnifyingglass" && <Search className="h-4 w-4" />}
+                    {tool.iconName === "globe" && <Globe className="h-4 w-4" />}
+                    {tool.iconName === "doc.text" && <FileText className="h-4 w-4" />}
+                    {![
+                      "list.bullet",
+                      "chevron.left.forwardslash.chevron.right",
+                      "magnifyingglass",
+                      "globe",
+                      "doc.text",
+                    ].includes(tool.iconName) && <span className="text-xs font-mono">{tool.iconName}</span>}
                   </div>
                   <div>
                     <p className="font-medium">{tool.name}</p>
