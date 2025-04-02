@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 30% 96%;
+    --foreground: 38 36% 20%;
+
+    --card: 60 30% 98%;
+    --card-foreground: 38 36% 20%;
+
+    --popover: 60 30% 98%;
+    --popover-foreground: 38 36% 20%;
+
+    --primary: 142 33% 46%;
+    --primary-foreground: 60 30% 98%;
+
+    --secondary: 38 40% 84%;
+    --secondary-foreground: 38 36% 20%;
+
+    --muted: 38 20% 94%;
+    --muted-foreground: 38 36% 40%;
+
+    --accent: 38 40% 84%;
+    --accent-foreground: 38 36% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 30% 98%;
+
+    --border: 38 20% 82%;
+    --input: 38 20% 82%;
+    --ring: 142 33% 46%;
+
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-ghibli-cloud text-foreground bg-ghibli-gradient bg-fixed;
+    font-family: "Nunito", sans-serif;
+  }
+}
+
+/* Ghibli-inspired paper texture for cards and containers */
+.ghibli-paper {
+  @apply bg-white bg-opacity-80 backdrop-blur-sm;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ghibli-paper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Ghibli-inspired decorative elements */
+.ghibli-leaf {
+  @apply absolute opacity-30;
+  width: 40px;
+  height: 40px;
+}
+
+.ghibli-cloud {
+  @apply absolute opacity-30;
+  width: 50px;
+  height: 50px;
+}
+
+/* Ghibli-inspired buttons */
+.ghibli-btn {
+  @apply rounded-full px-6 py-2 font-medium transition-all duration-300 shadow-md;
+  background-color: #7a9e7e;
+  color: white;
+  border: 2px solid #7a9e7e;
+}
+
+.ghibli-btn:hover {
+  background-color: #8baf8f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ghibli-btn-outline {
+  @apply rounded-full px-6 py-2 font-medium transition-all duration-300 shadow-md;
+  background-color: transparent;
+  color: #7a9e7e;
+  border: 2px solid #7a9e7e;
+}
+
+.ghibli-btn-outline:hover {
+  background-color: rgba(122, 158, 126, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ghibli-inspired inputs */
+.ghibli-input {
+  @apply rounded-full px-4 py-2 border-2 transition-all duration-300;
+  border-color: #d8b384;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.ghibli-input:focus {
+  @apply outline-none;
+  border-color: #7a9e7e;
+  box-shadow: 0 0 0 3px rgba(122, 158, 126, 0.2);
+}
+

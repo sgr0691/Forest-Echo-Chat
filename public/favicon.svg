@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#f5f7dc" />
+  
+  <!-- Forest silhouette -->
+  <path d="M8 48C8 48 12 36 16 36C20 36 20 42 24 42C28 42 28 34 32 34C36 34 36 40 40 40C44 40 44 32 48 32C52 32 56 48 56 48H8Z" fill="#7a9e7e" />
+  
+  <!-- Echo waves -->
+  <path d="M32 10C25.6 10 20 15.6 20 22C20 28.4 25.6 34 32 34" stroke="#a8d8ea" stroke-width="3" stroke-linecap="round" />
+  <path d="M32 16C28.8 16 26 18.8 26 22C26 25.2 28.8 28 32 28" stroke="#a8d8ea" stroke-width="3" stroke-linecap="round" />
+  <path d="M32 4C22.4 4 14 12.4 14 22C14 31.6 22.4 40 32 40" stroke="#a8d8ea" stroke-width="3" stroke-linecap="round" />
+</svg>
+
